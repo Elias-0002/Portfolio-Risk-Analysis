@@ -17,35 +17,43 @@ The framework compares portfolio construction strategies and applies Value at Ri
 
 ## Portfolio Construction
 
+
 ### 1. Equal-Weight Portfolio
 
-Allocates the same proportion of capital to each asset.
+Allocates an equal proportion of capital to each asset.
 
-For a portfolio with \(N\) assets, each asset receives a weight of:
+For a portfolio with \(N\) assets, the weight assigned to each asset is:
 
-\[
-w_i = \frac{1}{N}
-\]
+$$
+w_i = \frac{1}{N}, \qquad i = 1, 2, \ldots, N
+$$
 
-This provides a simple benchmark for comparing alternative allocation strategies.
+This strategy provides a simple benchmark for comparing alternative portfolio allocation methods.
 
 ### 2. Global Minimum Variance Portfolio
 
-Uses portfolio optimization to minimize total portfolio variance subject to investment constraints.
+Uses portfolio optimization to minimize total portfolio variance, subject to investment constraints.
 
-\[
+The optimization problem is defined as:
+
+$$
 \min_{\mathbf{w}} \quad \mathbf{w}^{T}\Sigma\mathbf{w}
-\]
+$$
 
 Subject to:
 
-\[
-\sum_{i=1}^{N} w_i = 1, \qquad w_i \geq 0
-\]
+$$
+\sum_{i=1}^{N} w_i = 1, \qquad w_i \geq 0 \quad \forall i
+$$
 
-where \(\mathbf{w}\) represents portfolio weights and \(\Sigma\) is the covariance matrix of asset returns.
+where:
 
-The portfolio is fully invested and long-only, without short selling.
+- \(\mathbf{w}\) represents the vector of portfolio weights.
+- \(\Sigma\) represents the covariance matrix of asset returns.
+- \(N\) is the number of assets in the portfolio.
+
+These constraints ensure that the portfolio is fully invested and long-only, meaning short selling is not permitted.
+
 
 ## Risk Measurement
 
