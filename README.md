@@ -48,9 +48,9 @@ $$
 
 where:
 
-- \(\mathbf{w}\) represents the vector of portfolio weights.
-- \(\Sigma\) represents the covariance matrix of asset returns.
-- \(N\) is the number of assets in the portfolio.
+- $$\(\mathbf{w}\)$$ represents the vector of portfolio weights.
+- $$\(\Sigma\)$$ represents the covariance matrix of asset returns.
+- $$\(N\)$$ is the number of assets in the portfolio.
 
 These constraints ensure that the portfolio is fully invested and long-only, meaning short selling is not permitted.
 
